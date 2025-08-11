@@ -6,6 +6,7 @@ use App\Models\Cobranca;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+
 class CobrancaController extends Controller
 {
     /**
@@ -13,7 +14,8 @@ class CobrancaController extends Controller
      */
     public function index()
     {
-        //
+        $cobrancas = Cobranca::all();
+        return view('site.cobranca', compact('cobrancas'));
     }
 
     /**

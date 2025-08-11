@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\http\Controllers\CobrancaController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::resource('/cobranca', [CobrancaController::class, 'index']);
